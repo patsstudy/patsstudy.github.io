@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Sheets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .button {
+            background-color: #007bff; /* Blue color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px; /* Space between buttons */
+        }
+        .button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>1st Year Study Guide</h1>
+
+    <!-- Buttons -->
+    <button class="button" onclick="openStudySheet('irish')">Irish</button>
+    <button class="button" onclick="openStudySheet('math')">Maths (This is very, very, rough)</button>
+    <button class="button" onclick="openStudySheet('history')">History</button>
+    <button class="button" onclick="openStudySheet('science')">Science</button>
+	<button class="button" onclick="openStudySheet('english')">English</button>
+	<button class="button" onclick="openStudySheet('religion')">Religion</button>
+	<button class="button" onclick="openStudySheet('business')">Business</button>
+	<button class="button" onclick="openStudySheet('geography')">Geography</button>
+
+    <script>
+        function openStudySheet(subject) {
+            // Replace the links below with the actual URLs or file paths
+            const studySheets = {
+                irish: "https://docs.google.com/document/d/1DlNdeg2UOqSgB7Vih-9pU4MZnY8Xv5l0ch8GmKH1gFQ/edit?usp=sharing",
+                math: "https://docs.google.com/document/d/1mdo6jFY0iv2jQekcM6_UKcEkhoRaIEbXeNIpKLEFaAI/edit?usp=sharing",
+                history: "https://docs.google.com/document/d/1HEK6NdbWJQOSfSz63DQbp9nSPIy6upF1Hz4U2yXiRaw/edit?usp=sharing",
+                science: "https://docs.google.com/document/d/1L9P-xHqXFL3XFTJ9IpHMznFIQ32MfSGOH2lqVa9-cTw/edit?usp=sharing",
+				english: "https://docs.google.com/document/d/12uKqCqMTFgLYPWVDYk1U4AEzXilkgPw7Q9yY5MPxwmE/edit?usp=sharing",
+				religion: "https://docs.google.com/document/d/1LMTELQAgNYSFL_dY_Sa7vN-IABWaVpdpvifPbBcRFjM/edit?usp=sharing",
+				geography: "https://docs.google.com/document/d/1HP6Vq-WkWIjD2KLNzYb2zmmU2JVtbkOkGfQlUUcIURc/edit?usp=sharing",
+				business: "https://docs.google.com/document/d/1ckEZp41Moz8jAxmNYr5bHjEoAAtj8sEVQ-DkUEGNNUs/edit?usp=sharing"
+				
+            };
+
+            // Open the selected study sheet in a new tab
+            if (studySheets[subject]) {
+                window.open(studySheets[subject], "_blank");
+            } else {
+                alert("Study sheet not found!");
+            }
+        }
+    </script>
+	<br/>
+	<p>This is a rough guide, always check if this will be on your test<p/>
+</body>
+</html>
