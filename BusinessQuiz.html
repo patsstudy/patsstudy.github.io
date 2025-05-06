@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Finance Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    .correct {
+      color: green;
+    }
+    .incorrect {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Personal Finance Basics Quiz</h1>
+
+  <div class="question" id="q1">
+    <p>1. What does "Net Pay" mean?</p>
+    <input type="radio" name="q1" value="A"> A) Pay before tax<br>
+    <input type="radio" name="q1" value="B"> B) Overtime pay<br>
+    <input type="radio" name="q1" value="C"> C) Take-home pay<br>
+    <input type="radio" name="q1" value="D"> D) Bonus pay<br>
+    <button onclick="checkAnswer('q1', 'C')">Submit</button>
+    <p id="feedback-q1"></p>
+  </div>
+
+  <div class="question" id="q2">
+    <p>2. Which of these is a statutory deduction?</p>
+    <input type="radio" name="q2" value="A"> A) Union fees<br>
+    <input type="radio" name="q2" value="B"> B) Gym membership<br>
+    <input type="radio" name="q2" value="C"> C) PRSI<br>
+    <input type="radio" name="q2" value="D"> D) Health insurance<br>
+    <button onclick="checkAnswer('q2', 'C')">Submit</button>
+    <p id="feedback-q2"></p>
+  </div>
+
+  <div class="question" id="q3">
+    <p>3. What is discretionary income?</p>
+    <input type="radio" name="q3" value="A"> A) All your wages<br>
+    <input type="radio" name="q3" value="B"> B) Income before tax<br>
+    <input type="radio" name="q3" value="C"> C) Leftover after needs<br>
+    <input type="radio" name="q3" value="D"> D) Gross income<br>
+    <button onclick="checkAnswer('q3', 'C')">Submit</button>
+    <p id="feedback-q3"></p>
+  </div>
+
+  <div class="question" id="q4">
+    <p>4. What is a budget?</p>
+    <input type="radio" name="q4" value="A"> A) A tax form<br>
+    <input type="radio" name="q4" value="B"> B) A bank account<br>
+    <input type="radio" name="q4" value="C"> C) A spending guess<br>
+    <input type="radio" name="q4" value="D"> D) A money plan<br>
+    <button onclick="checkAnswer('q4', 'D')">Submit</button>
+    <p id="feedback-q4"></p>
+  </div>
+
+  <div class="question" id="q5">
+    <p>5. What is capital expenditure?</p>
+    <input type="radio" name="q5" value="A"> A) Weekly groceries<br>
+    <input type="radio" name="q5" value="B"> B) Bills<br>
+    <input type="radio" name="q5" value="C"> C) Long-term purchases<br>
+    <input type="radio" name="q5" value="D"> D) Monthly rent<br>
+    <button onclick="checkAnswer('q5', 'C')">Submit</button>
+    <p id="feedback-q5"></p>
+  </div>
+
+  <script>
+    function checkAnswer(questionId, correctAnswer) {
+      const options = document.getElementsByName(questionId);
+      const feedback = document.getElementById('feedback-' + questionId);
+      let selected = '';
+      for (const option of options) {
+        if (option.checked) {
+          selected = option.value;
+          break;
+        }
+      }
+      if (selected === correctAnswer) {
+        feedback.textContent = 'Correct!';
+        feedback.className = 'correct';
+      } else if (selected === '') {
+        feedback.textContent = 'Please select an answer.';
+        feedback.className = '';
+      } else {
+        feedback.textContent = 'Incorrect. Try again!';
+        feedback.className = 'incorrect';
+      }
+    }
+  </script>
+</body>
+</html>
