@@ -9,77 +9,73 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 50px;
+            background: linear-gradient(135deg, #e0f7fa, #fff);
+            overflow-x: hidden;
         }
+
+        h1 {
+            font-size: 3em;
+            animation: floaty 3s ease-in-out infinite;
+            color: #007bff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes floaty {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
         .button {
-            background-color: #007bff; /* Blue color */
+            background-color: #007bff;
             color: white;
             border: none;
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
             border-radius: 5px;
-            margin: 10px; /* Space between buttons */
+            margin: 10px;
+            transition: transform 0.3s ease;
         }
+
         .button:hover {
-            background-color: #0056b3; /* Darker blue on hover */
-        }
-	 #clock {
-            font-size: 3rem;
-            color: #333;
+            background-color: #0056b3;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
     <h1>Study Sheets!</h1>
-	 <div id="clock"></div>
 
     <!-- Buttons -->
-	<button class="button" onclick="openStudySheet('science')">Science</button>
-	<button class="button" onclick="openStudySheet('business')">Business</button>
-
-
-	
+    <button class="button" onclick="openStudySheet('science')">Science</button>
+    <button class="button" onclick="openStudySheet('business')">Business</button>
+    <button class="button" onclick="openStudySheet('irish')">Irish</button>
 
     <script>
         function openStudySheet(subject) {
-            // Replace the links below with the actual URLs or file paths
             const studySheets = {
                 irish: "https://docs.google.com/document/d/1DlNdeg2UOqSgB7Vih-9pU4MZnY8Xv5l0ch8GmKH1gFQ/edit?usp=sharing",
-                math: "https://docs.google.com/document/d/1mdo6jFY0iv2jQekcM6_UKcEkhoRaIEbXeNIpKLEFaAI/edit?usp=sharing",
+                maths: "https://docs.google.com/document/d/1mdo6jFY0iv2jQekcM6_UKcEkhoRaIEbXeNIpKLEFaAI/edit?usp=sharing",
                 history: "https://docs.google.com/document/d/1HEK6NdbWJQOSfSz63DQbp9nSPIy6upF1Hz4U2yXiRaw/edit?usp=sharing",
                 science: "https://docs.google.com/document/d/1L9P-xHqXFL3XFTJ9IpHMznFIQ32MfSGOH2lqVa9-cTw/edit?usp=sharing",
-				english: "https://docs.google.com/document/d/12uKqCqMTFgLYPWVDYk1U4AEzXilkgPw7Q9yY5MPxwmE/edit?usp=sharing",
-				religion: "https://docs.google.com/document/d/1LMTELQAgNYSFL_dY_Sa7vN-IABWaVpdpvifPbBcRFjM/edit?usp=sharing",
-				geography: "https://docs.google.com/document/d/1HP6Vq-WkWIjD2KLNzYb2zmmU2JVtbkOkGfQlUUcIURc/edit?usp=sharing",
-				business: "https://docs.google.com/document/d/1ckEZp41Moz8jAxmNYr5bHjEoAAtj8sEVQ-DkUEGNNUs/edit?usp=sharing"
-				
+                english: "https://docs.google.com/document/d/12uKqCqMTFgLYPWVDYk1U4AEzXilkgPw7Q9yY5MPxwmE/edit?usp=sharing",
+                religion: "https://docs.google.com/document/d/1LMTELQAgNYSFL_dY_Sa7vN-IABWaVpdpvifPbBcRFjM/edit?usp=sharing",
+                geography: "https://docs.google.com/document/d/1HP6Vq-WkWIjD2KLNzYb2zmmU2JVtbkOkGfQlUUcIURc/edit?usp=sharing",
+                business: "https://docs.google.com/document/d/1ckEZp41Moz8jAxmNYr5bHjEoAAtj8sEVQ-DkUEGNNUs/edit?usp=sharing"
             };
 
-            // Open the selected study sheet in a new tab
             if (studySheets[subject]) {
                 window.open(studySheets[subject], "_blank");
             } else {
                 alert("Study sheet not found!");
             }
         }
-	     function updateClock() {
-            const clockElement = document.getElementById('clock');
-            const now = new Date();
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            clockElement.textContent = `${hours}:${minutes}:${seconds}`;
-        }
+    </script>
 
-        // Update the clock every second
-        setInterval(updateClock, 1000);
-        // Initialize the clock immediately
-        updateClock();
-    </script>
-    </script>
-	<br/>
-	<h3>by Michael Mulfaul</h3>
-	<br/>
-	<p>This is a rough guide, always check if this will be on your test<p/>
+    <br/>
+    <h3>by Michael Mulfaul</h3>
+    <br/>
+    <p>This is a rough guide, always check if this will be on your test</p>
 </body>
 </html>
