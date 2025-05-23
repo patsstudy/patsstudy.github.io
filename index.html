@@ -46,6 +46,16 @@
       100% { transform: translateY(0); }
     }
 
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-height: 200px;
+      overflow-y: auto;
+      padding: 10px;
+      z-index: 1;
+    }
+
     .button {
       background: linear-gradient(135deg, #007bff, #0056b3);
       color: white;
@@ -105,17 +115,18 @@
   <canvas id="particles"></canvas>
   <h1>Study Sheets!</h1>
 
-  <!-- Buttons -->
-  
-  <button class="button" onclick="openStudySheet('business')">Business</button>
-  <button class="button" onclick="openStudySheet('irish')">Irish</button>
-  <button class="button" onclick="openStudySheet('science')">Science</button>
-  <button class="button" onclick="openStudySheet('religion')">Religion</button>
-  <button class="button" onclick="openStudySheet('history')">History</button>
-  <button class="button" onclick="openStudySheet('engine')">Engineering</button>
-  <button class="button" onclick="openStudySheet('english')">English</button>
-  <button class="button" onclick="openStudySheet('geography')">Geography</button>
-  
+  <!-- Scrollable Button Container -->
+  <div class="button-container">
+    <button class="button" onclick="openStudySheet('business')">Business</button>
+    <button class="button" onclick="openStudySheet('irish')">Irish</button>
+    <button class="button" onclick="openStudySheet('science')">Science</button>
+    <button class="button" onclick="openStudySheet('religion')">Religion</button>
+    <button class="button" onclick="openStudySheet('history')">History</button>
+    <button class="button" onclick="openStudySheet('engine')">Engineering</button>
+    <button class="button" onclick="openStudySheet('english')">English</button>
+    <button class="button" onclick="openStudySheet('geography')">Geography</button>
+  </div>
+
   <h3>by Michael Mulfaul</h3>
   <p>This is a rough guide, always check if this will be on your test</p>
 
@@ -183,45 +194,45 @@
       canvas.height = window.innerHeight;
     });
   </script>
+
   <!-- Countdown Timer -->
-<p id="countdownTimer" style="font-size: 1.5em; font-weight: 600;"></p>
-<h2 id="countdownLabel" style="margin-top: 20px; color: #333;"></h2>
+  <p id="countdownTimer" style="font-size: 1.5em; font-weight: 600;"></p>
+  <h2 id="countdownLabel" style="margin-top: 20px; color: #333;"></h2>
 
-<script>
-  function updateCountdown() {
-    const now = new Date();
-    const examStart = new Date("May 26, 2025 13:43:00");
-    const examEnd = new Date("May 29, 2025 15:43:00");
+  <script>
+    function updateCountdown() {
+      const now = new Date();
+      const examStart = new Date("May 26, 2025 13:43:00");
+      const examEnd = new Date("May 29, 2025 15:43:00");
 
-    let target, label;
+      let target, label;
 
-    if (now < examStart) {
-      target = examStart;
-      label = "until exams";
-    } else if (now < examEnd) {
-      target = examEnd;
-      label = "until exams are over";
-    } else {
-      document.getElementById("countdownLabel").style.display = "none";
-      document.getElementById("countdownTimer").style.display = "none";
-      return;
+      if (now < examStart) {
+        target = examStart;
+        label = "until exams";
+      } else if (now < examEnd) {
+        target = examEnd;
+        label = "until exams are over";
+      } else {
+        document.getElementById("countdownLabel").style.display = "none";
+        document.getElementById("countdownTimer").style.display = "none";
+        return;
+      }
+
+      const diff = target - now;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / 1000 / 60) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("countdownLabel").textContent = label;
+      document.getElementById("countdownTimer").textContent = 
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      setTimeout(updateCountdown, 1000);
     }
 
-    const diff = target - now;
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / 1000 / 60) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
-
-    document.getElementById("countdownLabel").textContent = label;
-    document.getElementById("countdownTimer").textContent = 
-      `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-    setTimeout(updateCountdown, 1000);
-  }
-
-  updateCountdown();
-</script>
-
+    updateCountdown();
+  </script>
 </body>
 </html>
