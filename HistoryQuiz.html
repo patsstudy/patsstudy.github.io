@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>1st Year History – Summer Test Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question h3 {
+      margin: 0 0 10px;
+    }
+    .question label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    #result {
+      margin-top: 30px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h1>1st Year History – Summer Quiz</h1>
+
+<form id="quizForm">
+  <div class="question">
+    <h3>1. What material were peasant houses made from?</h3>
+    <label><input type="radio" name="q1" value="a" /> Stone and slate</label>
+    <label><input type="radio" name="q1" value="b" /> Wattle and daub</label>
+    <label><input type="radio" name="q1" value="c" /> Brick and concrete</label>
+  </div>
+
+  <div class="question">
+    <h3>2. Which food was rare in a peasant’s diet?</h3>
+    <label><input type="radio" name="q2" value="a" /> Meat</label>
+    <label><input type="radio" name="q2" value="b" /> Bread</label>
+    <label><input type="radio" name="q2" value="c" /> Cheese</label>
+  </div>
+
+  <div class="question">
+    <h3>3. What type of work was ‘boon work’?</h3>
+    <label><input type="radio" name="q3" value="a" /> Paid labour</label>
+    <label><input type="radio" name="q3" value="b" /> Voluntary service</label>
+    <label><input type="radio" name="q3" value="c" /> Labour owed to the lord</label>
+  </div>
+
+  <div class="question">
+    <h3>4. What did peasants rely on for survival?</h3>
+    <label><input type="radio" name="q4" value="a" /> Good harvests</label>
+    <label><input type="radio" name="q4" value="b" /> Castle guards</label>
+    <label><input type="radio" name="q4" value="c" /> Trade routes</label>
+  </div>
+
+  <div class="question">
+    <h3>5. Which of these was NOT a duty of a lord?</h3>
+    <label><input type="radio" name="q5" value="a" /> Protect the people</label>
+    <label><input type="radio" name="q5" value="b" /> Sell indulgences</label>
+    <label><input type="radio" name="q5" value="c" /> Uphold the king’s law</label>
+  </div>
+
+  <div class="question">
+    <h3>6. What was a lady’s main role in a castle?</h3>
+    <label><input type="radio" name="q6" value="a" /> Training knights</label>
+    <label><input type="radio" name="q6" value="b" /> Running the household</label>
+    <label><input type="radio" name="q6" value="c" /> Hunting deer</label>
+  </div>
+
+  <div class="question">
+    <h3>7. Which technique gave Renaissance art depth?</h3>
+    <label><input type="radio" name="q7" value="a" /> Symmetry</label>
+    <label><input type="radio" name="q7" value="b" /> Perspective</label>
+    <label><input type="radio" name="q7" value="c" /> Expressionism</label>
+  </div>
+
+  <div class="question">
+    <h3>8. Who painted the Sistine Chapel ceiling?</h3>
+    <label><input type="radio" name="q8" value="a" /> Leonardo da Vinci</label>
+    <label><input type="radio" name="q8" value="b" /> Michelangelo</label>
+    <label><input type="radio" name="q8" value="c" /> Raphael</label>
+  </div>
+
+  <div class="question">
+    <h3>9. What did Vesalius study?</h3>
+    <label><input type="radio" name="q9" value="a" /> Astronomy</label>
+    <label><input type="radio" name="q9" value="b" /> Anatomy</label>
+    <label><input type="radio" name="q9" value="c" /> Navigation</label>
+  </div>
+
+  <div class="question">
+    <h3>10. Who discovered blood circulation?</h3>
+    <label><input type="radio" name="q10" value="a" /> Copernicus</label>
+    <label><input type="radio" name="q10" value="b" /> Harvey</label>
+    <label><input type="radio" name="q10" value="c" /> Gutenberg</label>
+  </div>
+
+  <div class="question">
+    <h3>11. What was the main goal of Portuguese exploration?</h3>
+    <label><input type="radio" name="q11" value="a" /> Find gold in America</label>
+    <label><input type="radio" name="q11" value="b" /> Reach India via Africa</label>
+    <label><input type="radio" name="q11" value="c" /> Conquer China</label>
+  </div>
+
+  <div class="question">
+    <h3>12. Who conquered the Aztecs?</h3>
+    <label><input type="radio" name="q12" value="a" /> Pizarro</label>
+    <label><input type="radio" name="q12" value="b" /> Cortés</label>
+    <label><input type="radio" name="q12" value="c" /> Columbus</label>
+  </div>
+
+  <div class="question">
+    <h3>13. What was the Columbian Exchange?</h3>
+    <label><input type="radio" name="q13" value="a" /> Slave auctions</label>
+    <label><input type="radio" name="q13" value="b" /> Goods traded between Europe and the Americas</label>
+    <label><input type="radio" name="q13" value="c" /> Religious missions</label>
+  </div>
+
+  <div class="question">
+    <h3>14. What did Martin Luther famously write?</h3>
+    <label><input type="radio" name="q14" value="a" /> 95 Theses</label>
+    <label><input type="radio" name="q14" value="b" /> Magna Carta</label>
+    <label><input type="radio" name="q14" value="c" /> Divine Rights</label>
+  </div>
+
+  <div class="question">
+    <h3>15. What was the Diet of Worms?</h3>
+    <label><input type="radio" name="q15" value="a" /> A book by Luther</label>
+    <label><input type="radio" name="q15" value="b" /> A meeting where Luther was asked to recant</label>
+    <label><input type="radio" name="q15" value="c" /> A Catholic feast day</label>
+  </div>
+
+  <button type="button" onclick="checkAnswers()">Submit</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+  const answers = {
+    q1: "b",
+    q2: "a",
+    q3: "c",
+    q4: "a",
+    q5: "b",
+    q6: "b",
+    q7: "b",
+    q8: "b",
+    q9: "b",
+    q10: "b",
+    q11: "b",
+    q12: "b",
+    q13: "b",
+    q14: "a",
+    q15: "b"
+  };
+
+  function checkAnswers() {
+    let score = 0;
+    for (let key in answers) {
+      const selected = document.querySelector(`input[name="${key}"]:checked`);
+      if (selected && selected.value === answers[key]) {
+        score++;
+      }
+    }
+    document.getElementById("result").textContent = `You scored ${score} out of 15. ${score >= 12 ? "Legend!" : score >= 8 ? "Solid effort!" : "Time to hit those notes again!"}`;
+  }
+</script>
+
+</body>
+</html>
