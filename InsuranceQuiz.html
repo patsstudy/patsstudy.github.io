@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Insurance Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f0f8ff;
+    }
+    h1 {
+      color: #1f3c88;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question h3 {
+      margin: 0 0 10px;
+    }
+    .question label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    #result {
+      margin-top: 30px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Insurance Quiz – Know Your Cover!</h1>
+
+<form id="quizForm">
+  <div class="question">
+    <h3>1. What is the purpose of insurance?</h3>
+    <label><input type="radio" name="q1" value="a" /> To make profit</label>
+    <label><input type="radio" name="q1" value="b" /> To protect against financial loss</label>
+    <label><input type="radio" name="q1" value="c" /> To lend money</label>
+  </div>
+
+  <div class="question">
+    <h3>2. What is a premium?</h3>
+    <label><input type="radio" name="q2" value="a" /> The maximum payout</label>
+    <label><input type="radio" name="q2" value="b" /> The fee paid for insurance</label>
+    <label><input type="radio" name="q2" value="c" /> A bonus for no claims</label>
+  </div>
+
+  <div class="question">
+    <h3>3. What is the 'principle of utmost good faith'?</h3>
+    <label><input type="radio" name="q3" value="a" /> Always being polite</label>
+    <label><input type="radio" name="q3" value="b" /> Telling the truth on application</label>
+    <label><input type="radio" name="q3" value="c" /> Offering fair prices</label>
+  </div>
+
+  <div class="question">
+    <h3>4. Which principle states you cannot profit from insurance?</h3>
+    <label><input type="radio" name="q4" value="a" /> Contribution</label>
+    <label><input type="radio" name="q4" value="b" /> Indemnity</label>
+    <label><input type="radio" name="q4" value="c" /> Subrogation</label>
+  </div>
+
+  <div class="question">
+    <h3>5. What does 'insurable interest' mean?</h3>
+    <label><input type="radio" name="q5" value="a" /> You benefit from the insured item</label>
+    <label><input type="radio" name="q5" value="b" /> You enjoy insurance quizzes</label>
+    <label><input type="radio" name="q5" value="c" /> You want to save money</label>
+  </div>
+
+  <div class="question">
+    <h3>6. What is a claim?</h3>
+    <label><input type="radio" name="q6" value="a" /> A type of insurance</label>
+    <label><input type="radio" name="q6" value="b" /> A request for compensation</label>
+    <label><input type="radio" name="q6" value="c" /> A discount on premiums</label>
+  </div>
+
+  <div class="question">
+    <h3>7. What is the excess in insurance?</h3>
+    <label><input type="radio" name="q7" value="a" /> The maximum you get paid</label>
+    <label><input type="radio" name="q7" value="b" /> The amount you pay before the insurer pays</label>
+    <label><input type="radio" name="q7" value="c" /> An extra cover add-on</label>
+  </div>
+
+  <div class="question">
+    <h3>8. What is ‘subrogation’?</h3>
+    <label><input type="radio" name="q8" value="a" /> The right to sue third parties after a claim</label>
+    <label><input type="radio" name="q8" value="b" /> Lowering your premium</label>
+    <label><input type="radio" name="q8" value="c" /> Filing for compensation</label>
+  </div>
+
+  <div class="question">
+    <h3>9. What is ‘contribution’ in insurance?</h3>
+    <label><input type="radio" name="q9" value="a" /> Donating to the insurer</label>
+    <label><input type="radio" name="q9" value="b" /> Sharing the risk between insurers</label>
+    <label><input type="radio" name="q9" value="c" /> Adding bonus cover</label>
+  </div>
+
+  <div class="question">
+    <h3>10. What kind of insurance is compulsory by law in Ireland?</h3>
+    <label><input type="radio" name="q10" value="a" /> Pet insurance</label>
+    <label><input type="radio" name="q10" value="b" /> Car insurance</label>
+    <label><input type="radio" name="q10" value="c" /> Travel insurance</label>
+  </div>
+
+  <div class="question">
+    <h3>11. What is a no-claims bonus?</h3>
+    <label><input type="radio" name="q11" value="a" /> A refund</label>
+    <label><input type="radio" name="q11" value="b" /> A reward for not making claims</label>
+    <label><input type="radio" name="q11" value="c" /> A new type of policy</label>
+  </div>
+
+  <div class="question">
+    <h3>12. Which of these is an example of life assurance?</h3>
+    <label><input type="radio" name="q12" value="a" /> Car insurance</label>
+    <label><input type="radio" name="q12" value="b" /> Whole-of-life cover</label>
+    <label><input type="radio" name="q12" value="c" /> Holiday insurance</label>
+  </div>
+
+  <div class="question">
+    <h3>13. What happens if you lie on an insurance application?</h3>
+    <label><input type="radio" name="q13" value="a" /> You get a discount</label>
+    <label><input type="radio" name="q13" value="b" /> The claim might be refused</label>
+    <label><input type="radio" name="q13" value="c" /> The insurer pays extra</label>
+  </div>
+
+  <div class="question">
+    <h3>14. Which principle prevents being over-insured?</h3>
+    <label><input type="radio" name="q14" value="a" /> Indemnity</label>
+    <label><input type="radio" name="q14" value="b" /> Subrogation</label>
+    <label><input type="radio" name="q14" value="c" /> Contribution</label>
+  </div>
+
+  <div class="question">
+    <h3>15. What is the insurance broker’s job?</h3>
+    <label><input type="radio" name="q15" value="a" /> Sell houses</label>
+    <label><input type="radio" name="q15" value="b" /> Act as a middleman between client and insurance company</label>
+    <label><input type="radio" name="q15" value="c" /> Investigate accidents</label>
+  </div>
+
+  <button type="button" onclick="checkAnswers()">Submit</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+  const answers = {
+    q1: "b",
+    q2: "b",
+    q3: "b",
+    q4: "b",
+    q5: "a",
+    q6: "b",
+    q7: "b",
+    q8: "a",
+    q9: "b",
+    q10: "b",
+    q11: "b",
+    q12: "b",
+    q13: "b",
+    q14: "a",
+    q15: "b"
+  };
+
+  function checkAnswers() {
+    let score = 0;
+    for (let key in answers) {
+      const selected = document.querySelector(`input[name="${key}"]:checked`);
+      if (selected && selected.value === answers[key]) {
+        score++;
+      }
+    }
+    document.getElementById("result").textContent = `You scored ${score} out of 15. ${score >= 12 ? "Insured Genius!" : score >= 8 ? "Nice job!" : "Claim denied! Time to revise!"}`;
+  }
+</script>
+
+</body>
+</html>
