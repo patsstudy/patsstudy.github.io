@@ -12,7 +12,7 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden;
+      overflow-y: auto;
       font-family: 'Poppins', sans-serif;
       background: #f0f8ff;
     }
@@ -111,19 +111,40 @@
       h1 { font-size: 2em; }
       .button { font-size: 14px; padding: 10px 20px; }
     }
+
+    /* Fake Ad Styles */
+    .fake-ad {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: white;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+      z-index: 10;
+    }
+
+    .fake-ad img {
+      max-height: 80px;
+      display: block;
+      margin: 5px auto;
+    }
+
+    .fake-ad p {
+      margin: 5px 0;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
   <canvas id="particles"></canvas>
   <h1>Study Sheets</h1>
 
-  <!-- Scrollable Button Container -->
   <div class="button-container">
     <button class="button" onclick="openStudySheet('science')">Science</button>
     <button class="button" onclick="openStudySheet('geography')">Geography</button>
     <button class="button" onclick="openStudySheet('history')">History</button>
-    
-
   </div>
 
   <h3>by Michael Mulfaul</h3>
@@ -151,7 +172,6 @@
       }
     }
 
-    // Particle background
     const canvas = document.getElementById('particles');
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
@@ -179,7 +199,6 @@
         p.x += p.dx;
         p.y += p.dy;
 
-        // bounce off edges
         if (p.x <= 0 || p.x >= canvas.width) p.dx *= -1;
         if (p.y <= 0 || p.y >= canvas.height) p.dy *= -1;
       }
@@ -188,14 +207,12 @@
 
     animate();
 
-    // Update canvas size on resize
     window.addEventListener('resize', () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     });
   </script>
 
-  <!-- Countdown Timer -->
   <p id="countdownTimer" style="font-size: 1.5em; font-weight: 600;"></p>
   <h2 id="countdownLabel" style="margin-top: 20px; color: #333;"></h2>
 
@@ -234,11 +251,13 @@
 
     updateCountdown();
   </script>
+
+  <!-- Fake Ad -->
+  <div class="fake-ad">
+    <p>Join my Minecraft Server</p>
+    <img src="logo.png" alt="Minecraft Ad">
+    <p>patscraft.serveminecraft.net</p>
+  </div>
+
 </body>
 </html>
-
-
-
-
-
-
